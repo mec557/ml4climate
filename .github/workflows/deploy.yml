@@ -5,8 +5,8 @@ on:
   push:
     branches:
     # temporary disable on master
-      - temp
-    #  - master
+      # - temp
+     - master
     #  - main
     # If your git repository has the Jupyter Book within some-subfolder next to
     # unrelated files, you can make this run only if a file within that specific
@@ -33,7 +33,7 @@ jobs:
           cache: pip # Implicitly uses requirements.txt for cache key
 
       - name: Install dependencies
-        run: pip install . jupyter-book
+        run: pip install . "jupyter-book<2"
 
       # (optional) Cache your executed notebooks between runs
       # if you have config:
@@ -43,7 +43,8 @@ jobs:
         uses: actions/cache@v4
         with:
           path: _build/.jupyter_cache
-          key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
+          # key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
+          key: jupyter-book-cache-${{ hashFiles('pyproject.toml') }}
 
       # Build the book
       - name: Build the book
