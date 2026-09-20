@@ -20,8 +20,8 @@ only_build_toc_files: true
 
 # Information about where the book exists on the web
 repository:
-  url                       : "https://gitlab.in2p3.fr/energy4climate/public/education/machine_learning_for_climate_and_energy/"
-  path_to_book              : "book/"
+  url                       : "https://github.com/mec557/ml4climate/"
+  path_to_book              : "ml4climate/"
   branch                    : "master"
 
 # Configure your Binder links, such as the URL of the BinderHub.
