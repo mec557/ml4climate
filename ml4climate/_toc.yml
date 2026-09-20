@@ -22,9 +22,13 @@ sections:
   - file: notebooks/10_neural_networks.ipynb
   - file: notebooks/10_tutorial_neural_networks.ipynb
   - file: notebooks/11_intro_deep_learning.ipynb
-  - file: notebooks/projects.ipynb
   - file: chapters/resources
   - file: notebooks/appendix_matrix_calculus.ipynb
   - file: notebooks/appendix_random_variables.ipynb
   - file: notebooks/appendix_elements_of_probability_theory.ipynb
   - file: notebooks/appendix_supplementary_matrial.ipynb
+  - file: notebooks/project_elnino.ipynb
+  - file: notebooks/project_ghi.ipynb
+  - file: notebooks/project_microwave.ipynb
+  - file: notebooks/project_vre.ipynb
+  - file: notebooks/project_weather.ipynb
