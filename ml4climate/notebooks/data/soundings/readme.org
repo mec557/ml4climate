@@ -1,0 +1,113 @@
+* Overview
+
+This repository contains atmospheric radiosonde observations from
+Météo-France's public observations datasets.
+
+The data are distributed as CSV files and contain vertical profiles of
+atmospheric variables measured by radiosondes at meteorological stations
+in France.
+
+* Data source
+
+** Database
+
+The dataset is available through the Météo-France data portal:
+
+https://meteo.data.gouv.fr/datasets?category=observations
+
+** Raw data
+
+The raw CSV files are available at:
+
+https://files.data.gouv.fr/meteofrance/data/OBS/RS/
+
+* Data organization
+
+The raw data are organized hierarchically by observation date:
+
+#+BEGIN_EXAMPLE
+RS/
+├── YYYY/
+│   ├── MM/
+│   │   ├── DD/
+│   │   │   ├── file_id.csv
+│   │   │   └── ...
+│   │   └── ...
+│   └── ...
+└── ...
+#+END_EXAMPLE
+
+where:
+
+- ~YYYY~ is the year
+- ~MM~ is the month
+- ~DD~ is the day
+- ~file_id.csv~ contains the radiosonde observations for a station and
+  sounding time
+
+Not every calendar day is necessarily represented in the archive.
+Some days and months are missing.
+
+* File naming
+
+The filename contains the station identifier followed by the date and
+time of the sounding.
+
+For example:
+
+#+BEGIN_EXAMPLE
+07145.19970901000000.csv
+#+END_EXAMPLE
+
+Here, ~07145~ is the WMO station number and ~19970901000000~ corresponds
+to 1997-09-01 00:00:00 UTC.
+
+The station number is given by the leading digits of the filename.
+
+* Station of interest: Trappes
+
+The analysis in this repository focuses on the Trappes radiosonde
+station:
+
+- Station number: ~07145~
+- Location: Trappes, France
+- Latitude: 48.77°N
+- Longitude: 2.01°E
+
+* File format
+
+A typical file begins with metadata describing the station and sounding:
+
+#+BEGIN_EXAMPLE
+numer_sta,date,nb_niv,
+07145,19970831230000,66,
+p_niv,geop,t,td,dd,ff,
+100000,135,mq,mq,mq,mq,
+99700,mq,292.350000,287.350000,230,2.100000,
+94100,mq,mq,mq,255,12.900000,
+92500,789,288.150000,283.950000,250,12.900000,
+#+END_EXAMPLE
+
+The first metadata fields are:
+
+- ~numer_sta~ :: station number
+- ~date~ :: sounding date and time
+- ~nb_niv~ :: number of vertical levels in the sounding
+
+The vertical profile contains the following variables:
+
+- ~p_niv~ :: pressure level
+- ~geop~ :: geopotential altitude
+- ~t~ :: air temperature
+- ~td~ :: dew-point temperature
+- ~dd~ :: wind direction
+- ~ff~ :: wind speed
+
+The value ~mq~ denotes a missing value.
+
+* References
+
+- Météo-France data portal:
+  https://meteo.data.gouv.fr/datasets?category=observations
+- Météo-France raw radiosonde data:
+  https://files.data.gouv.fr/meteofrance/data/OBS/RS/
