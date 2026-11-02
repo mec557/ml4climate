@@ -7,6 +7,7 @@ sections:
   - file: notebooks/02_tutorial_supervised_learning_problem_ols.ipynb
   - file: notebooks/03_ordinary_least_squares.ipynb
   - file: notebooks/04_overfitting_underfitting_bias_variance.ipynb
+  - file: notebooks/04_data_selection.ipynb
   - file: notebooks/04_tutorial_overfitting_underfitting_bias_variance.ipynb
   - file: notebooks/05_regularization_selection_evaluation.ipynb
   - file: notebooks/05_tutorial_regularization_selection_evaluation.ipynb
@@ -15,6 +16,7 @@ sections:
   - file: notebooks/07_classification_discriminative.ipynb
   - file: notebooks/07_tutorial_classification_discriminative.ipynb
   - file: notebooks/08_unsupervised_learning_pca.ipynb
+  - file: notebooks/08_unsupervised_clustering.ipynb
   - file: notebooks/08_tutorial_unsupervised_learning_pca.ipynb
   - file: notebooks/09_ensemble_methods.ipynb
   - file: notebooks/09_tutorial_ensemble_methods_windcf_prediction.ipynb
@@ -27,7 +29,7 @@ sections:
   - file: notebooks/appendix_random_variables.ipynb
   - file: notebooks/appendix_elements_of_probability_theory.ipynb
   - file: notebooks/appendix_supplementary_matrial.ipynb
-  - file: notebooks/project_elnino.ipynb
+  - file: notebooks/project_super_elnino.ipynb
   - file: notebooks/project_ghi.ipynb
   - file: notebooks/project_microwave.ipynb
   - file: notebooks/project_vre.ipynb
